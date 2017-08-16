@@ -1,0 +1,27 @@
+export fn=fabric-build-timings.csv
+
+export s1="\[ssh-agent\] Started"
+export s1d="ssh start,"
+export s2="docker ps -a"
+export s2d="docker start,"
+export s3="Successfully tagged hyperledger/fabric-couchdb:latest"
+export s3d="docker tagged,"
+export s4="docker-compose up"
+export s4d="docker up,"
+export s5="Obtaining list of tests to run for the following packages"
+export s5d="unit test start,"
+export s6="\[ssh-agent\] Stopped"
+export s6d="ssh stop,"
+
+echo "Build,"$s1d $s2d $s3d $s4d $s5d $s6d|tee $fn
+for i in $(ls *log); do 
+  export bn=`echo $i |colrm 1 29 | colrm 6`
+  export v1=`grep "$s1" $i|colrm 9`
+  export v2=`grep "$s2" $i|colrm 9`
+  export v3=`grep "$s3" $i|colrm 9`
+  export v4=`grep "$s4" $i|colrm 9`
+  export v5=`grep "$s5" $i|colrm 9`
+  export v6=`grep "$s6" $i|colrm 9`
+  echo $bn,$v1,$v2,$v3,$v4,$v5,$v6
+  echo $bn,$v1,$v2,$v3,$v4,$v5,$v6 >>$fn
+done

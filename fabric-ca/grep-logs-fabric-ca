@@ -1,0 +1,9 @@
+rm fabric-ca-build-timings.csv
+for i in $(ls *log); do 
+  export bn=`echo $i | colrm 1 32 | colrm 5`
+  export st=`grep TIMESTAMP $i | colrm 1 11 | grep -v ENDED| tr " " "," | head -1`
+  export et=`grep TIMESTAMP $i | colrm 1 11 | grep -v ENDED| tr " " "," | tail -1`
+  echo $bn,$st,$et
+  echo $bn,$st,$et >> fabric-ca-build-timings.csv
+  #gzip $i
+done

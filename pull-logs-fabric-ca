@@ -1,0 +1,6 @@
+for i in $(seq 1143 1607); do 
+  echo getting fabric-ca $i
+  export fn="fabric-ca-verify-x86_64-console-$i.log.gz"
+  wget -q https://logs.hyperledger.org/production/vex-yul-hyp-jenkins-1/fabric-ca-verify-x86_64/$i/console.log.gz -O fabric-ca/$fn
+  gunzip fabric-ca/$fn
+done
