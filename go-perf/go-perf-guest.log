@@ -1,0 +1,234 @@
+Script started on 2017-08-16 02:05:47-0700
+[root@localhost gpt]# ./test-go-perf.sh 1.7 && ./test-go-perf.sh 1.7.6 && ./test-go-perf.sh 1.8 && ./test-go-perf.sh 1.8.3
++ GO_VER=1.7
++ export GOROOT=/root/gpt/go1.7
++ GOROOT=/root/gpt/go1.7
++ /root/gpt/go1.7/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-4         	      50	  22096219 ns/op	  47.45 MB/s
+BenchmarkThroughput/MaxPacket/2MB-4         	      30	  36029360 ns/op	  58.21 MB/s
+BenchmarkThroughput/MaxPacket/4MB-4         	      20	  64099507 ns/op	  65.43 MB/s
+BenchmarkThroughput/MaxPacket/8MB-4         	      10	 118997251 ns/op	  70.49 MB/s
+BenchmarkThroughput/MaxPacket/16MB-4        	       5	 228497814 ns/op	  73.42 MB/s
+BenchmarkThroughput/MaxPacket/32MB-4        	       3	 451885310 ns/op	  74.25 MB/s
+BenchmarkThroughput/MaxPacket/64MB-4        	       2	 885507909 ns/op	  75.79 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-4     	     100	  23398829 ns/op	  44.81 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-4     	      50	  37889891 ns/op	  55.35 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-4     	      20	  65243514 ns/op	  64.29 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-4     	      10	 119900948 ns/op	  69.96 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-4    	       5	 243072565 ns/op	  69.02 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-4    	       3	 448304661 ns/op	  74.85 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-4    	       2	 879150217 ns/op	  76.33 MB/s
+BenchmarkLatency/MaxPacket/200kbps-4        	       2	 705048898 ns/op
+BenchmarkLatency/MaxPacket/500kbps-4        	       5	 287991263 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-4       	      10	 148336857 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-4       	      20	  78936208 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-4       	      50	  37324897 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-4    	      10	 144064702 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-4    	      20	  63390054 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-4   	      30	  35804600 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-4   	      50	  22977966 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-4   	     100	  15193602 ns/op
+PASS
+ok  	crypto/tls	44.860s
++ GO_VER=1.7.6
++ export GOROOT=/root/gpt/go1.7.6
++ GOROOT=/root/gpt/go1.7.6
++ /root/gpt/go1.7.6/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-4         	     100	  22795248 ns/op	  46.00 MB/s
+BenchmarkThroughput/MaxPacket/2MB-4         	      30	  37194868 ns/op	  56.38 MB/s
+BenchmarkThroughput/MaxPacket/4MB-4         	      20	  65483195 ns/op	  64.05 MB/s
+BenchmarkThroughput/MaxPacket/8MB-4         	      10	 117989320 ns/op	  71.10 MB/s
+BenchmarkThroughput/MaxPacket/16MB-4        	       5	 225773945 ns/op	  74.31 MB/s
+BenchmarkThroughput/MaxPacket/32MB-4        	       3	 469403024 ns/op	  71.48 MB/s
+BenchmarkThroughput/MaxPacket/64MB-4        	       2	 874499187 ns/op	  76.74 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-4     	      50	  23106429 ns/op	  45.38 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-4     	      30	  36371295 ns/op	  57.66 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-4     	      20	  63727435 ns/op	  65.82 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-4     	      10	 117178065 ns/op	  71.59 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-4    	       5	 230557560 ns/op	  72.77 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-4    	       3	 467204788 ns/op	  71.82 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-4    	       2	 887156653 ns/op	  75.64 MB/s
+BenchmarkLatency/MaxPacket/200kbps-4        	       2	 704537813 ns/op
+BenchmarkLatency/MaxPacket/500kbps-4        	       5	 286888323 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-4       	      10	 148532875 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-4       	      20	  79176883 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-4       	      30	  38023220 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-4    	      10	 144435615 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-4    	      20	  64243429 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-4   	      30	  36208758 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-4   	      50	  21867232 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-4   	     100	  14790570 ns/op
+PASS
+ok  	crypto/tls	43.587s
++ GO_VER=1.8
++ export GOROOT=/root/gpt/go1.8
++ GOROOT=/root/gpt/go1.8
++ /root/gpt/go1.8/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-4         	     100	  21712397 ns/op	  48.29 MB/s
+BenchmarkThroughput/MaxPacket/2MB-4         	      30	  35931472 ns/op	  58.37 MB/s
+BenchmarkThroughput/MaxPacket/4MB-4         	      20	  62264470 ns/op	  67.36 MB/s
+BenchmarkThroughput/MaxPacket/8MB-4         	      10	 115897506 ns/op	  72.38 MB/s
+BenchmarkThroughput/MaxPacket/16MB-4        	       5	 220854672 ns/op	  75.96 MB/s
+BenchmarkThroughput/MaxPacket/32MB-4        	       3	 428945979 ns/op	  78.23 MB/s
+BenchmarkThroughput/MaxPacket/64MB-4        	       2	 858924213 ns/op	  78.13 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-4     	     100	  22966136 ns/op	  45.66 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-4     	      50	  36840707 ns/op	  56.92 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-4     	      20	  63000264 ns/op	  66.58 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-4     	      10	 116152738 ns/op	  72.22 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-4    	       5	 226917847 ns/op	  73.94 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-4    	       3	 428733233 ns/op	  78.26 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-4    	       2	 830760453 ns/op	  80.78 MB/s
+BenchmarkLatency/MaxPacket/200kbps-4        	       2	 701291698 ns/op
+BenchmarkLatency/MaxPacket/500kbps-4        	       5	 285494834 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-4       	      10	 147982313 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-4       	      20	  78293449 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-4       	      30	  37175209 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-4    	      10	 141762496 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-4    	      20	  62402998 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-4   	      50	  35312060 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-4   	     100	  22610965 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-4   	     100	  14751729 ns/op
+PASS
+ok  	crypto/tls	45.310s
++ GO_VER=1.8.3
++ export GOROOT=/root/gpt/go1.8.3
++ GOROOT=/root/gpt/go1.8.3
++ /root/gpt/go1.8.3/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-4         	     100	  21864176 ns/op	  47.96 MB/s
+BenchmarkThroughput/MaxPacket/2MB-4         	      30	  36544456 ns/op	  57.39 MB/s
+BenchmarkThroughput/MaxPacket/4MB-4         	      20	  64126807 ns/op	  65.41 MB/s
+BenchmarkThroughput/MaxPacket/8MB-4         	      10	 116256772 ns/op	  72.16 MB/s
+BenchmarkThroughput/MaxPacket/16MB-4        	       5	 224458658 ns/op	  74.75 MB/s
+BenchmarkThroughput/MaxPacket/32MB-4        	       3	 425961169 ns/op	  78.77 MB/s
+BenchmarkThroughput/MaxPacket/64MB-4        	       2	 883570568 ns/op	  75.95 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-4     	      50	  22533569 ns/op	  46.53 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-4     	      30	  35461053 ns/op	  59.14 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-4     	      20	  62287872 ns/op	  67.34 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-4     	      10	 116210157 ns/op	  72.18 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-4    	       5	 232094567 ns/op	  72.29 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-4    	       3	 447539635 ns/op	  74.98 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-4    	       2	 864960271 ns/op	  77.59 MB/s
+BenchmarkLatency/MaxPacket/200kbps-4        	       2	 702550406 ns/op
+BenchmarkLatency/MaxPacket/500kbps-4        	       5	 286846025 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-4       	      10	 148408634 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-4       	      20	  78110826 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-4       	      50	  37463155 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-4    	      10	 140550942 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-4    	      20	  62584919 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-4   	      50	  35362306 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-4   	      50	  22922794 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-4   	     100	  15249655 ns/op
+PASS
+ok  	crypto/tls	43.225s
+[root@localhost gpt]# cat /proc/cpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel Core Processor (Haswell, no TSX)
+stepping	: 1
+microcode	: 0x1
+cpu MHz		: 2294.686
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat
+bugs		:
+bogomips	: 4589.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel Core Processor (Haswell, no TSX)
+stepping	: 1
+microcode	: 0x1
+cpu MHz		: 2294.686
+cache size	: 16384 KB
+physical id	: 1
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat
+bugs		:
+bogomips	: 4589.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel Core Processor (Haswell, no TSX)
+stepping	: 1
+microcode	: 0x1
+cpu MHz		: 2294.686
+cache size	: 16384 KB
+physical id	: 2
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat
+bugs		:
+bogomips	: 4589.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel Core Processor (Haswell, no TSX)
+stepping	: 1
+microcode	: 0x1
+cpu MHz		: 2294.686
+cache size	: 16384 KB
+physical id	: 3
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat
+bugs		:
+bogomips	: 4589.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+[root@localhost gpt]# exit
+
+Script done on 2017-08-16 02:10:52-0700

@@ -1,0 +1,342 @@
+Script started on 2017-08-16 02:13:55-0700
+[root@lflaptop gpt]# ./test-go-perf.sh 1.7 && ./test-go-perf.sh 1.7.6 && ./test-go-perf.sh 1.8 && ./test-go-perf.sh 1.8.3
++ GO_VER=1.7
++ export GOROOT=/home/ry/gpt/go1.7
++ GOROOT=/home/ry/gpt/go1.7
++ /home/ry/gpt/go1.7/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-8         	     100	  19943387 ns/op	  52.58 MB/s
+BenchmarkThroughput/MaxPacket/2MB-8         	      50	  32312758 ns/op	  64.90 MB/s
+BenchmarkThroughput/MaxPacket/4MB-8         	      20	  56667988 ns/op	  74.02 MB/s
+BenchmarkThroughput/MaxPacket/8MB-8         	      10	 107541964 ns/op	  78.00 MB/s
+BenchmarkThroughput/MaxPacket/16MB-8        	      10	 195926115 ns/op	  85.63 MB/s
+BenchmarkThroughput/MaxPacket/32MB-8        	       3	 389801300 ns/op	  86.08 MB/s
+BenchmarkThroughput/MaxPacket/64MB-8        	       2	 807853776 ns/op	  83.07 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-8     	     100	  20680977 ns/op	  50.70 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-8     	      50	  33122013 ns/op	  63.32 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-8     	      20	  57268240 ns/op	  73.24 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-8     	      10	 103202783 ns/op	  81.28 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-8    	      10	 191830234 ns/op	  87.46 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-8    	       3	 379600376 ns/op	  88.39 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-8    	       2	 753858814 ns/op	  89.02 MB/s
+BenchmarkLatency/MaxPacket/200kbps-8        	       2	 703463553 ns/op
+BenchmarkLatency/MaxPacket/500kbps-8        	       5	 286038399 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-8       	      10	 146733150 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-8       	      20	  77280780 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-8       	      50	  35558785 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-8    	      10	 142086475 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-8    	      20	  61421479 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-8   	      50	  34571538 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-8   	     100	  21153284 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-8   	     100	  13125781 ns/op
+PASS
+ok  	crypto/tls	47.860s
++ GO_VER=1.7.6
++ export GOROOT=/home/ry/gpt/go1.7.6
++ GOROOT=/home/ry/gpt/go1.7.6
++ /home/ry/gpt/go1.7.6/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-8         	     100	  19924094 ns/op	  52.63 MB/s
+BenchmarkThroughput/MaxPacket/2MB-8         	      50	  32260386 ns/op	  65.01 MB/s
+BenchmarkThroughput/MaxPacket/4MB-8         	      20	  57124402 ns/op	  73.42 MB/s
+BenchmarkThroughput/MaxPacket/8MB-8         	      10	 107566307 ns/op	  77.99 MB/s
+BenchmarkThroughput/MaxPacket/16MB-8        	      10	 197950766 ns/op	  84.75 MB/s
+BenchmarkThroughput/MaxPacket/32MB-8        	       3	 375864926 ns/op	  89.27 MB/s
+BenchmarkThroughput/MaxPacket/64MB-8        	       2	 758298572 ns/op	  88.50 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-8     	     100	  20573000 ns/op	  50.97 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-8     	      50	  33227343 ns/op	  63.12 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-8     	      20	  59291439 ns/op	  70.74 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-8     	      20	 103941453 ns/op	  80.71 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-8    	      10	 195998674 ns/op	  85.60 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-8    	       3	 362342977 ns/op	  92.60 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-8    	       2	 729761064 ns/op	  91.96 MB/s
+BenchmarkLatency/MaxPacket/200kbps-8        	       2	 703201492 ns/op
+BenchmarkLatency/MaxPacket/500kbps-8        	       5	 285669603 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-8       	      10	 146622883 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-8       	      20	  77452430 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-8       	      50	  35539587 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-8    	      10	 142058324 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-8    	      20	  61301783 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-8   	      50	  34540052 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-8   	     100	  21154208 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-8   	     100	  13032877 ns/op
+PASS
+ok  	crypto/tls	48.151s
++ GO_VER=1.8
++ export GOROOT=/home/ry/gpt/go1.8
++ GOROOT=/home/ry/gpt/go1.8
++ /home/ry/gpt/go1.8/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-8         	     100	  19519283 ns/op	  53.72 MB/s
+BenchmarkThroughput/MaxPacket/2MB-8         	      50	  31455638 ns/op	  66.67 MB/s
+BenchmarkThroughput/MaxPacket/4MB-8         	      20	  55728074 ns/op	  75.26 MB/s
+BenchmarkThroughput/MaxPacket/8MB-8         	      10	 102582956 ns/op	  81.77 MB/s
+BenchmarkThroughput/MaxPacket/16MB-8        	      10	 197844254 ns/op	  84.80 MB/s
+BenchmarkThroughput/MaxPacket/32MB-8        	       3	 378807879 ns/op	  88.58 MB/s
+BenchmarkThroughput/MaxPacket/64MB-8        	       2	 743461284 ns/op	  90.27 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-8     	     100	  20008293 ns/op	  52.41 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-8     	      50	  31870419 ns/op	  65.80 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-8     	      20	  55306277 ns/op	  75.84 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-8     	      10	 101370718 ns/op	  82.75 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-8    	       5	 201345346 ns/op	  83.33 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-8    	       3	 377323460 ns/op	  88.93 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-8    	       2	 695976742 ns/op	  96.42 MB/s
+BenchmarkLatency/MaxPacket/200kbps-8        	       2	 700255201 ns/op
+BenchmarkLatency/MaxPacket/500kbps-8        	       5	 284339885 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-8       	      10	 146017128 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-8       	      20	  76763584 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-8       	      50	  35469765 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-8    	      10	 139518996 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-8    	      20	  60323673 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-8   	      50	  33928945 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-8   	     100	  20776282 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-8   	     100	  13042274 ns/op
+PASS
+ok  	crypto/tls	44.602s
++ GO_VER=1.8.3
++ export GOROOT=/home/ry/gpt/go1.8.3
++ GOROOT=/home/ry/gpt/go1.8.3
++ /home/ry/gpt/go1.8.3/bin/go test crypto/tls -bench=.
+BenchmarkThroughput/MaxPacket/1MB-8         	     100	  19545009 ns/op	  53.65 MB/s
+BenchmarkThroughput/MaxPacket/2MB-8         	      50	  31956285 ns/op	  65.63 MB/s
+BenchmarkThroughput/MaxPacket/4MB-8         	      20	  55452197 ns/op	  75.64 MB/s
+BenchmarkThroughput/MaxPacket/8MB-8         	      20	 103108684 ns/op	  81.36 MB/s
+BenchmarkThroughput/MaxPacket/16MB-8        	       5	 201529529 ns/op	  83.25 MB/s
+BenchmarkThroughput/MaxPacket/32MB-8        	       3	 389336310 ns/op	  86.18 MB/s
+BenchmarkThroughput/MaxPacket/64MB-8        	       2	 724684880 ns/op	  92.60 MB/s
+BenchmarkThroughput/DynamicPacket/1MB-8     	     100	  20101188 ns/op	  52.16 MB/s
+BenchmarkThroughput/DynamicPacket/2MB-8     	      50	  31870376 ns/op	  65.80 MB/s
+BenchmarkThroughput/DynamicPacket/4MB-8     	      20	  57031359 ns/op	  73.54 MB/s
+BenchmarkThroughput/DynamicPacket/8MB-8     	      10	 106143304 ns/op	  79.03 MB/s
+BenchmarkThroughput/DynamicPacket/16MB-8    	      10	 195194195 ns/op	  85.95 MB/s
+BenchmarkThroughput/DynamicPacket/32MB-8    	       3	 375077703 ns/op	  89.46 MB/s
+BenchmarkThroughput/DynamicPacket/64MB-8    	       2	 766809791 ns/op	  87.52 MB/s
+BenchmarkLatency/MaxPacket/200kbps-8        	       2	 700375963 ns/op
+BenchmarkLatency/MaxPacket/500kbps-8        	       5	 284539867 ns/op
+BenchmarkLatency/MaxPacket/1000kbps-8       	      10	 146219718 ns/op
+BenchmarkLatency/MaxPacket/2000kbps-8       	      20	  76813621 ns/op
+BenchmarkLatency/MaxPacket/5000kbps-8       	      50	  35546680 ns/op
+BenchmarkLatency/DynamicPacket/200kbps-8    	      10	 139586934 ns/op
+BenchmarkLatency/DynamicPacket/500kbps-8    	      20	  60396558 ns/op
+BenchmarkLatency/DynamicPacket/1000kbps-8   	      50	  33903251 ns/op
+BenchmarkLatency/DynamicPacket/2000kbps-8   	     100	  20820032 ns/op
+BenchmarkLatency/DynamicPacket/5000kbps-8   	     100	  13082893 ns/op
+PASS
+ok  	crypto/tls	45.793s
+]0;root@lflaptop:/home/ry/gpt[root@lflaptop gpt]# cat /proc/sc[K[Kcpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.030
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4589.24
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.030
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4601.62
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 799.890
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4601.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 799.890
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4601.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.030
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4608.21
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.170
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4602.07
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.030
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4602.09
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+stepping	: 3
+microcode	: 0x22
+cpu MHz		: 800.030
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4601.89
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+[root@lflaptop gpt]# exit
+
+Script done on 2017-08-16 02:19:23-0700
